@@ -10,20 +10,20 @@ import leharinImg from './assets/leharin.jpg';
 // Register GSAP ScrollTrigger
 gsap.registerPlugin(ScrollTrigger);
 
+const logMessages = [
+  "[BOOT] Initializing ESP32-S3 Core...",
+  "[BOOT] Checking peripheral pin bindings...",
+  "[HW] GPIO 16/17 not detected. Remapping bus to GPIO 21/22...",
+  "[HW] Dual S3KM1110 24GHz mmWave Radar online.",
+  "[BOOT] Opening Pi 5 UART link on GPIO 26/27 (115200 bps)...",
+  "[VISION] Instantiating dual-model YOLOv8 inference engines...",
+  "[FUSION] Multi-sensor AND logic activated. System status: OK."
+];
+
 // 1. F1 Start Lights Preloader Component with system logs
 function Preloader({ onComplete }) {
   const [activeLights, setActiveLights] = useState(0);
   const [logs, setLogs] = useState([]);
-
-  const logMessages = [
-    "[BOOT] Initializing ESP32-S3 Core...",
-    "[BOOT] Checking peripheral pin bindings...",
-    "[HW] GPIO 16/17 not detected. Remapping bus to GPIO 21/22...",
-    "[HW] Dual S3KM1110 24GHz mmWave Radar online.",
-    "[BOOT] Opening Pi 5 UART link on GPIO 26/27 (115200 bps)...",
-    "[VISION] Instantiating dual-model YOLOv8 inference engines...",
-    "[FUSION] Multi-sensor AND logic activated. System status: OK."
-  ];
 
   useEffect(() => {
     // Light igniting loop
@@ -386,6 +386,23 @@ export default function App() {
                   From a Problem Statement to a Working Blind-Spot Safety System
                 </p>
               </div>
+
+              {/* Launcher Button for Driver Companion App */}
+              <div className="pt-2">
+                <a 
+                  href="?mode=companion" 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  className="inline-flex items-center gap-2 font-mono text-xs uppercase tracking-[0.15em] bg-gradient-to-r from-[#d97706] to-[#b45309] hover:from-[#f59e0b] hover:to-[#d97706] text-black font-black px-5 py-3.5 rounded shadow-[0_0_15px_rgba(217,119,6,0.35)] transition-all group cursor-pointer border border-[#d97706]/40"
+                >
+                  <span>Launch Driver Companion App</span>
+                  <svg className="w-3.5 h-3.5 transform group-hover:translate-x-1 transition-transform" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                    <line x1="5" y1="12" x2="19" y2="12" />
+                    <polyline points="12 5 19 12 12 19" />
+                  </svg>
+                </a>
+              </div>
+
               <div className="border-t border-[#2e3238] pt-6 flex flex-col gap-2">
                 <span className="font-mono text-[10px] text-neutral-500 uppercase tracking-widest">// DEVELOPMENT CREW</span>
                 <p className="font-mono text-[11px] text-neutral-300">
