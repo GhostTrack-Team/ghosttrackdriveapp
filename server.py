@@ -3,8 +3,8 @@ import socketserver
 import webbrowser
 import os
 
-PORT = 8000
-DIRECTORY = os.path.join(os.path.dirname(os.path.abspath(__file__)), "dist")
+PORT = 8005
+DIRECTORY = os.path.dirname(os.path.abspath(__file__))
 
 class Handler(http.server.SimpleHTTPRequestHandler):
     def __init__(self, *args, **kwargs):
