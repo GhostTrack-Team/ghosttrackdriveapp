@@ -2,7 +2,7 @@
 
 The in-cab companion app for **GhostTrack** — an AI-powered blind-spot information system for Heavy Commercial Vehicles. This app puts live GPS navigation and real-time blind-spot camera footage on one screen, designed to work *with* GhostTrack's physical alert system, not replace it.
 
-🔗 **Live app:** [Ahttps://ghosttrackdriveapp-git-7b2cba-leharinshainsha05-stacks-projects.vercel.app/]
+🔗 **Live app:** https://ghosttrackdriveapp-git-7b2cba-leharinshainsha05-stacks-projects.vercel.app/
 
 ---
 
