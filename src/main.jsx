@@ -5,7 +5,8 @@ import App from './App.jsx'
 import CompanionApp from './CompanionApp.jsx'
 
 const urlParams = new URLSearchParams(window.location.search);
-const isCompanion = urlParams.get('mode') === 'companion';
+// Default to the Driver Phone Companion App unless explicitly visiting "?mode=journey"
+const isCompanion = urlParams.get('mode') !== 'journey';
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
