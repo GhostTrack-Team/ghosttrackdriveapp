@@ -87,5 +87,4 @@ This app is the driver-facing companion to the main GhostTrack hardware system �
 
 **Team:** GhostTruck
 - S Leharin Nisha — Lead Creator & System Architect
-- Rajamaran — Hardware Prototyping Contributor
-- Sumith — Hardware Prototyping Contributor
+
